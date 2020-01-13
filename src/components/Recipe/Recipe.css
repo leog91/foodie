@@ -1,0 +1,31 @@
+.Recipe {
+  padding-left: 20px;
+  display: flex;
+}
+
+.Article {
+  margin: 10px;
+}
+
+.Name {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.Description {
+  font-size: 17px;
+  margin-top: 30px;
+}
+
+.Ingredients {
+  padding-top: 88px;
+  background-color: salmon;
+  margin-left: auto;
+  padding-right: 20px;
+  height: calc(100vh - 142px);
+}
+
+.Image {
+  margin-top: 15px;
+  border-radius: 25px;
+}
