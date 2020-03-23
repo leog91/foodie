@@ -1,8 +1,19 @@
 import React from "react";
+import useFetch from "../../hooks/fetch";
 
 import "./Recipe.css";
 
 const Recipe = props => {
+  const [{ data, isLoading, isError }] = useFetch(
+    "http://localhost:3000/recipes",
+    []
+  );
+
+  console.log("data ==>", data);
+  console.log("isLoading", isLoading);
+
+  console.log("isError", isError);
+
   const fakeProps = {
     name: "Tomato Spaghetti",
     ingredients: ["Tomato", "Basil", "Parmesan", "Spaghetti"],
@@ -24,6 +35,18 @@ const Recipe = props => {
         <div className="Name">{fakeProps.name}</div>
         <div className="Description">{fakeProps.description}</div>
         <img className="Image" src={fakeProps.image} alt="dish" />
+
+        {isError && <div>Something went wrong ...</div>}
+
+        {isLoading ? (
+          <div>Loading ...</div>
+        ) : (
+          <ul>
+            {data.map(item => (
+              <li key={item._id}>{item.name}</li>
+            ))}
+          </ul>
+        )}
       </div>
       <div className="Ingredients">
         <ul> {ingredients}</ul>
