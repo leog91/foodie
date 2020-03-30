@@ -1,7 +1,7 @@
 import React from "react";
 import useFetch from "../../hooks/fetch";
 
-import "./Recipe.css";
+import styles from "./Recipe.module.css";
 
 const Recipe = props => {
   const [{ data, isLoading, isError }] = useFetch(
@@ -30,11 +30,11 @@ const Recipe = props => {
   ));
 
   return (
-    <div className="Recipe">
-      <div className="Article">
-        <div className="Name">{fakeProps.name}</div>
-        <div className="Description">{fakeProps.description}</div>
-        <img className="Image" src={fakeProps.image} alt="dish" />
+    <div className={styles.Recipe}>
+      <div className={styles.Article}>
+        <div className={styles.Name}>{fakeProps.name}</div>
+        <div className={styles.Description}>{fakeProps.description}</div>
+        <img className={styles.Image} src={fakeProps.image} alt="dish" />
 
         {isError && <div>Something went wrong ...</div>}
 
@@ -48,7 +48,7 @@ const Recipe = props => {
           </ul>
         )}
       </div>
-      <div className="Ingredients">
+      <div className={styles.Ingredients}>
         <ul> {ingredients}</ul>
       </div>
     </div>

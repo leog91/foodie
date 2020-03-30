@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon.cmd index.js"
   },
   "author": "leog",
   "license": "ISC",
@@ -12,6 +13,10 @@
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "mongoose": "^5.8.11"
+    "express-jwt": "^5.3.1",
+    "jwks-rsa": "^1.7.0",
+    "mongoose": "^5.8.11",
+    "passport": "^0.4.1",
+    "passport-auth0": "^1.3.2"
   }
 }

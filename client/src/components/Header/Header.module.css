@@ -7,6 +7,14 @@
   padding-left: 10px;
 }
 
-.Header:hover {
+.Header a:link {
+  text-decoration: none;
+}
+
+.Header a:visited {
+  color: black;
+}
+
+.Header a:hover {
   color: whitesmoke;
 }

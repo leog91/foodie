@@ -1,0 +1,12 @@
+{
+  "name": "foodie",
+  "version": "0.1.0",
+  "private": true,
+  "author": "leog",
+  "scripts": {
+    "start": "cd client && npm run start && cd ../api && npm run start",
+    "build": "",
+    "test": ""
+  },
+  "dependencies": {}
+}
